@@ -7,6 +7,7 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import cafe.adriel.voyager.navigator.Navigator
+import cafe.adriel.voyager.transitions.SlideTransition
 import com.paydustry.advancedsalesapp.composable.InitScreen
 
 fun main() = application {
@@ -19,12 +20,16 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
         state = state
     ) {
-        Navigator(screen = InitScreen())
+        Navigator(screen = InitScreen()) {
+            SlideTransition(navigator = it)
+        }
     }
 }
 
 @Preview
 @Composable
 fun AppDesktopPreview() {
-    Navigator(screen = InitScreen())
+    Navigator(screen = InitScreen()) {
+        SlideTransition(navigator = it)
+    }
 }

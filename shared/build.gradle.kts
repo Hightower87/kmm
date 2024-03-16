@@ -37,18 +37,14 @@ kotlin {
             implementation(libs.compose.ui.tooling)
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
-            implementation(libs.decompose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
             implementation(compose.ui)
-            @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
 
-            implementation(libs.decompose)
-            implementation(libs.decompose.jetbrains)
             implementation(libs.kotlinx.serialization.json)
 
             implementation(libs.kotlinx.datetime)

@@ -2,6 +2,7 @@ package com.paydustry.advancedsalesapp.composable
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -17,7 +18,7 @@ class LoginScreen: Screen {
     override fun Content() {
         val navigator = LocalNavigator.current
 
-        Column {
+        Column(modifier = Modifier.fillMaxSize()) {
             Text(text = "Logged in!")
             Button(onClick = {
                 navigator?.pop()
