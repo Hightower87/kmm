@@ -1,0 +1,50 @@
+[versions]
+agp = "8.3.0-alpha12"
+kotlin = "1.9.20"
+compose = "1.6.3"
+compose-compiler = "1.5.4"
+compose-material3 = "1.2.1"
+androidx-activityCompose = "1.8.2"
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
+compose-plugin = "1.5.11"
+extensionsComposeJetbrains = "2.1.4-compose-experimental"
+decompose = "2.2.0-alpha03"
+kotlinxDatetime = "0.4.1"
+kotlinxSerializationJson = "1.6.1"
+voyager = "1.0.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-ui-tooling-preview-desktop = { module = "androidx.compose.ui:ui-tooling-preview-desktop", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+decompose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "extensionsComposeJetbrains" }
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+voyager-navigator =  {group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref= "voyager"}
+voyager-screenmodel =  {group = "cafe.adriel.voyager", name = "voyager-screenmodel", version.ref= "voyager"}
+voyager-bottom-sheet =  {group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref= "voyager"}
+voyager-tab-navigator =  {group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref= "voyager"}
+voyager-transitions =  {group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref= "voyager"}
+voyager-koin =  {module = "cafe.adriel.voyager:voyager-koin", version.ref= "voyager"}
+voyager-livedata =  {module = "cafe.adriel.voyager:voyager-livedata", version.ref= "voyager"}
+voyager-hilt =  {module = "cafe.adriel.voyager:voyager-hilt", version.ref= "voyager"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+
+[bundles]
+voyager = ["voyager-navigator", "voyager-bottom-sheet", "voyager-tab-navigator", "voyager-transitions", "voyager-screenmodel"]
