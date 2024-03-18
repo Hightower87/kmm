@@ -26,11 +26,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    Navigator(screen = InitScreen()) {
-        SlideTransition(navigator = it)
-    }
-}

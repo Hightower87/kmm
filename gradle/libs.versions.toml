@@ -12,6 +12,9 @@ compose-plugin = "1.6.1"
 kotlinxDatetime = "0.4.1"
 kotlinxSerializationJson = "1.6.1"
 voyager = "1.0.0"
+ktor = "2.3.9"
+coroutines = "1.8.0"
+sqlDelightVersion = "1.5.5"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -24,6 +27,11 @@ compose-foundation = { module = "androidx.compose.foundation:foundation", versio
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 
 voyager-navigator =  {group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref= "voyager"}
 voyager-screenmodel =  {group = "cafe.adriel.voyager", name = "voyager-screenmodel", version.ref= "voyager"}
@@ -34,6 +42,10 @@ voyager-koin =  {module = "cafe.adriel.voyager:voyager-koin", version.ref= "voya
 voyager-livedata =  {module = "cafe.adriel.voyager:voyager-livedata", version.ref= "voyager"}
 voyager-hilt =  {module = "cafe.adriel.voyager:voyager-hilt", version.ref= "voyager"}
 
+sqldelight-runtime =  {module = "com.squareup.sqldelight:runtime", version.ref= "sqlDelightVersion"}
+sqldelight-android =  {module = "com.squareup.sqldelight:android-driver", version.ref= "sqlDelightVersion"}
+sqldelight-native =  {module = "com.squareup.sqldelight:native-driver", version.ref= "sqlDelightVersion"}
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -41,6 +53,8 @@ kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+sqldelight = { id = "com.squareup.sqldelight", version.ref = "sqlDelightVersion" }
 
 [bundles]
 voyager = ["voyager-navigator", "voyager-bottom-sheet", "voyager-tab-navigator", "voyager-transitions", "voyager-screenmodel"]
