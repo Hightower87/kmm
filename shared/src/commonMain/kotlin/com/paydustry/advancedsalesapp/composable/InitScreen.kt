@@ -16,7 +16,6 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.stringResource
 
 class InitScreen: Screen {
-    @OptIn(ExperimentalResourceApi::class)
     @Preview
     @Composable
     override fun Content() {
